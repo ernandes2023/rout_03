@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\listController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,3 +14,4 @@ Route::get('/', function () {
 
  Route::get('/dados/{name?}/{lastname?}/{email?}/{tel?}/{rua?}/{num?}', [userController::class, 'dados']);
 
+ Route::get('/lista/{name?}/{lastname?}', [listController::class, 'packadge']);

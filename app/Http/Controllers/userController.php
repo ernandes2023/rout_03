@@ -16,7 +16,7 @@ class userController extends Controller
 
             echo 'Insira um número, um operador aritimético e outro número para ser calculado!';
 
-        if($num2 == 0)
+        if($op == div && $num2 == 0)
 
             echo 'Não é possível divisão por zero!';
         
@@ -50,5 +50,8 @@ class userController extends Controller
 
         return view ('dados')->with('name',$name)->with('lastname', $lastname)->with('email', $email)->with('tel', $tel)->with('rua', $rua)->with('num', $num);
     }
+
+ 
+      
 
 };
